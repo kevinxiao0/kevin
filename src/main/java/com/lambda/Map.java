@@ -1,9 +1,6 @@
 package com.lambda;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -12,7 +9,7 @@ public class Map {
 
     public static void main(String[] args) {
 
-        List<String> lists = Arrays.asList("alskdjfh", "asdkjf");
+        List<String> lists = Arrays.asList("alskdjfh", "asdkjf","iuweytrwgef","eskjhdfgjk", "LKJHKJLHKJL");
         List<String> list = lists
                 .stream()
                 .filter(s -> s.contains("a"))
@@ -40,6 +37,17 @@ public class Map {
                         .filter(s -> s.contains("a"))
                         .map(String::toUpperCase)
                         .collect(Collectors.toList()));
+
+
+        //排序
+        System.out.println(lists);
+
+        lists.sort(String.CASE_INSENSITIVE_ORDER);
+        System.out.println(lists);
+
+        lists.sort(Comparator.naturalOrder());
+        System.out.println(lists);
+
 
 
     }
