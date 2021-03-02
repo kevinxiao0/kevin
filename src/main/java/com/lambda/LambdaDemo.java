@@ -1,5 +1,9 @@
 package com.lambda;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
 public class LambdaDemo {
 
 //    interface Printer{
@@ -53,6 +57,29 @@ public class LambdaDemo {
 //        lambdaDemo.printerSomething(some, printer);
 
         lambdaDemo.printerSomething(some, val -> System.out.println(val));
+
+        List<String> words = Arrays.asList("hello", "word");
+
+        words.stream()
+                .map(w -> Arrays.stream(w.split("")))
+                .forEach(System.out::println);
+
+        words.stream()
+                .map(w -> w.split(""))
+                .forEach(System.out::println);
+
+        words.stream()
+                .map(w -> w.split(""))
+                .forEach(System.out::println);
+
+        System.out.println(
+                words.stream()
+                        .flatMap(w -> Arrays.stream(w.split("")))
+//                .forEach(System.out::println);
+                        .collect(Collectors.toList())
+
+        );
+
     }
 
 
