@@ -1,5 +1,8 @@
 package com.lambda;
 
+import com.lambda.model.Employee;
+import com.lambda.StreamFilterPredicate;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
@@ -68,6 +71,46 @@ public class run {
         System.out.println(alphabeticOrder);
 
 
+        // 归约
+
+        List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6);
+
+        int total = numbers.stream().reduce(0, (subtotal, element) -> subtotal + element);
+        System.out.println(total);
+
+        int total1 = numbers.stream().reduce(0, Integer::sum);
+        System.out.println(total1);
+
+        List<String> string = Arrays.asList("a", "b", "c", "d");
+
+        String stringResult = string.stream().reduce("", (subtotal, element) -> subtotal.concat(element));
+        System.out.println(stringResult);
+
+        String stringResult1 = string.stream().reduce("", (subtotal, element) -> (subtotal + element));
+        System.out.println(stringResult1);
+
+        String stringResult2 = string.stream().reduce("", String::concat);
+        System.out.println(stringResult2);
+
+        //Employee
+
+        Employee e1 = new Employee(1, 2, "m", "ric", "bee");
+        Employee e2 = new Employee(2, 4, "f", "mar", "her");
+        Employee e3 = new Employee(3, 4, "m", "jon", "low");
+        Employee e4 = new Employee(3, 5, "h", "son", "yow");
+
+        List<Employee> employees = Arrays.asList(e1,e2,e3,e4);
+        int totalAge = employees.stream()
+                .map(Employee::getAge)
+                .reduce(0, Integer::sum);
+        System.out.println(totalAge);
+
+        int totalAge1 = employees.parallelStream()
+                .map(Employee::getAge)
+                .reduce(0, Integer::sum, Integer::sum);
+        System.out.println(totalAge1);
+
+        employees.stream().reduce(0,(subTotal, employee)-> subTotal+ employee.getAge(), Integer::sum);
 
 
 

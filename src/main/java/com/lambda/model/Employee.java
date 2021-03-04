@@ -17,5 +17,7 @@ public class Employee {
 
     public static Predicate<Employee> genderM = x-> x.getGender().equals("m");
 
+    public static Predicate<Employee> ageIsBigThan1 = x-> x.getAge()>1;
+
 
 }
