@@ -4,6 +4,7 @@ import com.lambda.model.Employee;
 import com.lambda.StreamFilterPredicate;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Collectors;
@@ -12,6 +13,18 @@ import java.util.stream.Stream;
 import static java.util.stream.Collectors.toList;
 
 public class run {
+
+    int a =1;
+    static int b = 2;
+
+    public void run(){
+
+    }
+
+    public static void go(){
+
+    }
+
 
     public static void main(String[] args) {
 
@@ -111,6 +124,127 @@ public class run {
         System.out.println(totalAge1);
 
         employees.stream().reduce(0,(subTotal, employee)-> subTotal+ employee.getAge(), Integer::sum);
+
+//        Scanner scanner = new Scanner(System.in);
+//        scanner.hasNextInt();
+
+        String s1 = "abc";
+        System.out.println(15-s1.length());
+        for(int y=0; y<(15-s1.length()); y++){
+            s1=s1+" ";
+        }
+        System.out.println(s1+123);
+
+        Integer x = 12;
+
+
+        run r = new run();
+        r.a=1;
+
+
+
+        System.out.println("================================");
+        for(int i=0;i<3;i++)
+        {
+            String s1x="java";
+            int xx=100;
+            //Complete this line
+
+            String nx = "";
+            int ix = s1x.length();
+            int ixy = 15-ix;
+            if(xx>=100){
+                for(int y=0; y<(ixy); y++){
+                    s1x=s1x+" ";
+                }
+                nx = String.valueOf(x);
+            }else{
+                for(int y=0; y<(ixy); y++){
+                    s1x=s1x+" ";
+                }
+                nx = "0"+String.valueOf(x);
+            }
+
+
+            System.out.println(s1x+nx);
+
+        }
+        System.out.println("================================");
+
+
+
+        if(x>=-128 && x<=127)System.out.println("* byte");
+        //Complete the code
+        if(x >= -Math.pow(2, 15) && x <= Math.pow(2, 15) - 1)
+            System.out.println("* short");
+        if(x >= -Math.pow(2, 31) && x <= Math.pow(2, 31) - 1)
+            System.out.println("* int");
+        if(x >= -Math.pow(2, 63) && x <= Math.pow(2, 63) - 1)
+            System.out.println("* long");
+
+        int n=923874659;
+        int c =0;
+        String s ="";
+        int max=0;
+        int count =0;
+
+        while (n>0){
+//            c=n%2;
+//            if(c==0){
+//                s="0"+s;
+//            }else{
+//                s="1"+s;
+//            }
+            if(n%2==1){
+                count++;
+                if(count>max){
+                    max=count;
+                }
+            }else {
+                count=0;
+            }
+
+          s= (n%2==0 ?"0":"1" )+s;
+          n/=2;
+        }
+        System.out.println(s);
+        System.out.println(max);
+
+
+        int max1=0;
+        String[] strparts = s.split("0");
+        for (int i = 0; i <strparts.length ; i++) {
+//            System.out.println(strparts[i]);
+            if( strparts[i].length()>=max1){
+                max1=strparts[i].length();
+            }
+        }
+        System.out.println("***");
+        System.out.println(max1);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
