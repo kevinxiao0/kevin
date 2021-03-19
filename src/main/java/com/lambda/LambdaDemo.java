@@ -37,6 +37,8 @@ public class LambdaDemo {
     }
 
     public static void main(String[] arge) {
+
+//        LambdaDemo lambdaDemo = new LambdaDemo();
         LambdaDemo lambdaDemo = new LambdaDemo();
         String some = "lasdf";
 
@@ -56,7 +58,9 @@ public class LambdaDemo {
 //        省略
 //        lambdaDemo.printerSomething(some, printer);
 
-        lambdaDemo.printerSomething(some, val -> System.out.println(val));
+//        lambdaDemo.printerSomething(some, val -> System.out.println(val));
+        lambdaDemo.printerSomething(some, s-> System.out.println(s));
+
 
         List<String> words = Arrays.asList("hello", "word");
 

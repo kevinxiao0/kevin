@@ -15,9 +15,7 @@ public class StreamFilterPredicate {
         Employee e3 = new Employee(3, 4, "m", "jon", "low");
         Employee e4 = new Employee(3, 5, "h", "son", "yow");
 
-
         List<Employee> employee = Arrays.asList(e1, e2, e3, e4);
-
 
         List<Employee> employeeList = employee.stream()
                 .filter(e -> e.getAge() > 2 && e.getId() > 2)

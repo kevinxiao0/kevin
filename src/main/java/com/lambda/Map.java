@@ -10,6 +10,8 @@ public class Map {
     public static void main(String[] args) {
 
         List<String> lists = Arrays.asList("alskdjfh", "asdkjf","iuweytrwgef","eskjhdfgjk", "LKJHKJLHKJL");
+
+
         List<String> list = lists
                 .stream()
                 .filter(s -> s.contains("a"))
@@ -17,6 +19,8 @@ public class Map {
                 .sorted()
                 .collect(Collectors.toList());
         System.out.println(list);
+
+        lists.stream().filter(s -> s.contains("a")).map(s -> s.toUpperCase()).sorted().collect(Collectors.toList());
 
 
 
