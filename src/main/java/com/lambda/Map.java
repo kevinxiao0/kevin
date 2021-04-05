@@ -52,6 +52,10 @@ public class Map {
         lists.sort(Comparator.naturalOrder());
         System.out.println(lists);
 
+        String s = "abc";
+        s.charAt(1);
+        s.length();
+
 
 
     }
