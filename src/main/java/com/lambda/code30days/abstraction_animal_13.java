@@ -22,14 +22,28 @@ public abstract class abstraction_animal_13 {
     }
 
     public static void main(String[] args) {
-        abstract_dog_12 d = new abstract_dog_12();
-        abstract_cat_12 c = new abstract_cat_12();
+        abstract_dog_13 d = new abstract_dog_13();
+        abstract_cat_13 c = new abstract_cat_13();
 
         d.eat();
         c.eat();
 
         d.sleep();
         c.sleep();
+
+        //Casting
+        Object dog = new abstract_dog_13();
+        abstract_dog_13 realDog = (abstract_dog_13) dog;
+        realDog.ruff();
+        ((abstract_dog_13) dog).ruff();
+
+        Object str = "str";
+
+        String realStr = (String) str;
+        realStr.toUpperCase();
+
+
+
 
     }
 

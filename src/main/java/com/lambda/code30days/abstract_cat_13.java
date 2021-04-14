@@ -1,8 +1,8 @@
 package com.lambda.code30days;
 
-public class abstract_cat_12 extends abstraction_animal_13 {
+public class abstract_cat_13 extends abstraction_animal_13 {
 
-    public abstract_cat_12() {
+    public abstract_cat_13() {
         super(7);
         System.out.println("A cat has been created");
     }
